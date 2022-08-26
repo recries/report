@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="emp">
+   <resultMap type="emp.EmpDTO" id="emp_result">
+  <result column ="location_id" property= "location_id"/>
+  <result column ="street_address" property= "street_address"/>
+  <result column ="postal_code" property= "postal_code"/>
+  <result column ="city" property= "city"/>
+  <result column ="state_province" property= "state_province"/>
+  <result column ="country_id" property= "country_id"/>
+  </resultMap>
+  <select id="cnt" resultMap="emp_result">
+  SELECT *
+	FROM locataions
+  </select>
+  
+  </mapper>
